@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+eureka:
+  shouldUseDns: false         
+  client:
+    serviceUrl:
+      defaultZone: http://service-registry:8761/eureka
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+  instance:
+    preferIpAddress: true 
+spring:    
+  application:
+    name: service-frontend
